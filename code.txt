@@ -1,0 +1,294 @@
+C:\Users\OJT>git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Forward-port local commits to the updated upstream head
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+C:\Users\OJT>mkdir tinahello
+
+C:\Users\OJT>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\OJT>dir
+ Volume in drive C has no label.
+ Volume Serial Number is FCA3-C416
+
+ Directory of C:\Users\OJT
+
+11/18/2015  02:08 PM    <DIR>          .
+11/18/2015  02:08 PM    <DIR>          ..
+11/13/2015  08:09 PM               145 .appletviewer
+11/04/2015  04:17 PM    <DIR>          .oracle_jre_usage
+11/12/2015  01:34 PM            12,544 Book1.xlsx
+10/29/2015  01:22 AM    <DIR>          Contacts
+11/12/2015  10:33 AM    <DIR>          Desktop
+11/18/2015  02:06 PM    <DIR>          Documents
+11/18/2015  01:38 PM    <DIR>          Downloads
+10/29/2015  01:22 AM    <DIR>          Favorites
+11/12/2015  01:33 PM             8,462 hazel.txt
+10/29/2015  01:22 AM    <DIR>          Links
+11/09/2015  07:22 PM    <DIR>          Music
+11/17/2015  08:31 PM    <DIR>          Pictures
+10/29/2015  01:22 AM    <DIR>          Saved Games
+11/11/2015  06:32 PM    <DIR>          Searches
+11/18/2015  02:08 PM    <DIR>          tinahello
+10/29/2015  01:40 AM    <DIR>          Tracing
+10/29/2015  01:22 AM    <DIR>          Videos
+11/13/2015  08:05 PM    <DIR>          workspace
+               3 File(s)         21,151 bytes
+              17 Dir(s)  376,833,413,120 bytes free
+
+C:\Users\OJT>cd tina
+The system cannot find the path specified.
+
+C:\Users\OJT>cd tinahello
+
+C:\Users\OJT\tinahello>echo # tinahello >> README.md
+
+C:\Users\OJT\tinahello>git init
+Initialized empty Git repository in C:/Users/OJT/tinahello/.git/
+
+C:\Users\OJT\tinahello>git config --global user.name "Tina Oporto"
+
+C:\Users\OJT\tinahello>git config --global user.email cristina.oporto@ymail.com
+
+C:\Users\OJT\tinahello>git init
+Reinitialized existing Git repository in C:/Users/OJT/tinahello/.git/
+
+C:\Users\OJT\tinahello>dir
+ Volume in drive C has no label.
+ Volume Serial Number is FCA3-C416
+
+ Directory of C:\Users\OJT\tinahello
+
+11/18/2015  02:10 PM    <DIR>          .
+11/18/2015  02:10 PM    <DIR>          ..
+11/18/2015  02:09 PM                14 README.md
+               1 File(s)             14 bytes
+               2 Dir(s)  376,830,373,888 bytes free
+
+C:\Users\OJT\tinahello>git init
+Reinitialized existing Git repository in C:/Users/OJT/tinahello/.git/
+
+C:\Users\OJT\tinahello>git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\OJT\tinahello>git add README.md
+
+C:\Users\OJT\tinahello>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   README.md
+
+
+C:\Users\OJT\tinahello>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        jeon.txt
+
+
+C:\Users\OJT\tinahello>git add jeon.txt
+
+C:\Users\OJT\tinahello>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   README.md
+        new file:   jeon.txt
+
+
+C:\Users\OJT\tinahello>git commit -h
+usage: git commit [<options>] [--] <pathspec>...
+
+    -q, --quiet           suppress summary after successful commit
+    -v, --verbose         show diff in commit message template
+
+Commit message options
+    -F, --file <file>     read message from file
+    --author <author>     override author for commit
+    --date <date>         override date for commit
+    -m, --message <message>
+                          commit message
+    -c, --reedit-message <commit>
+                          reuse and edit message from specified commit
+    -C, --reuse-message <commit>
+                          reuse message from specified commit
+    --fixup <commit>      use autosquash formatted message to fixup specified co
+mmit
+    --squash <commit>     use autosquash formatted message to squash specified c
+ommit
+    --reset-author        the commit is authored by me now (used with -C/-c/--am
+end)
+    -s, --signoff         add Signed-off-by:
+    -t, --template <file>
+                          use specified template file
+    -e, --edit            force edit of commit
+    --cleanup <default>   how to strip spaces and #comments from message
+    --status              include status in commit message template
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+
+Commit contents options
+    -a, --all             commit all changed files
+    -i, --include         add specified files to index for commit
+    --interactive         interactively add files
+    -p, --patch           interactively add changes
+    -o, --only            commit only specified files
+    -n, --no-verify       bypass pre-commit hook
+    --dry-run             show what would be committed
+    --short               show status concisely
+    --branch              show branch information
+    --porcelain           machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    --amend               amend previous commit
+    --no-post-rewrite     bypass post-rewrite hook
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no.
+ (Default: all)
+
+
+C:\Users\OJT\tinahello>clear
+'clear' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\OJT\tinahello>git statu
+git: 'statu' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+        status
+        stage
+        stash
+
+C:\Users\OJT\tinahello>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   README.md
+        new file:   jeon.txt
+
+
+C:\Users\OJT\tinahello>git commit -am "first commit"
+[master (root-commit) de59a06] first commit
+ 2 files changed, 2 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 jeon.txt
+
+C:\Users\OJT\tinahello>git remote add origin https://github.com/TinaOporto/tinah
+ello.git
+
+C:\Users\OJT\tinahello>git push -u origin master
+Username for 'https://github.com': TinaOporto
+Password for 'https://TinaOporto@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/TinaOporto/tinahello.git/'
+
+C:\Users\OJT\tinahello>git push -u origin master
+Username for 'https://github.com': TinaOporto
+Password for 'https://TinaOporto@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/TinaOporto/tinahello.git/'
+
+C:\Users\OJT\tinahello>git push -u origin master
+Username for 'https://github.com': TinaOporto
+Password for 'https://TinaOporto@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/TinaOporto/tinahello.git/'
+
+C:\Users\OJT\tinahello>git push -u origin master
+Username for 'https://github.com': TinaOporto
+Password for 'https://TinaOporto@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/TinaOporto/tinahello.git/'
+
+C:\Users\OJT\tinahello>git push -u origin master
+Username for 'https://github.com': cristina.oporto@ymail.com
+Password for 'https://cristina.oporto@ymail.com@github.com':
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/TinaOporto/tinahello.git/'
+
+C:\Users\OJT\tinahello>git push -u origin master
+Username for 'https://github.com': TinaOporto
+Password for 'https://TinaOporto@github.com':
+Counting objects: 4, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 277 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/TinaOporto/tinahello.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+C:\Users\OJT\tinahello>
